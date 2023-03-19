@@ -2,13 +2,6 @@ class Solution {
     public int[] solution(int numer1, int denom1, int numer2, int denom2) {
         // 최대공약수 구하기
         int p = gcd(denom1, denom2);
-        // if(denom1 < denom2 ){
-        //     p = gcd(denom2, denom1);
-        // }
-        // else if (denom1 > denom2) {
-        //     p = gcd(denom1, denom2);
-        // }
-        // else p = denom1;
         
         // 최소공배수 구하기
         int q = denom1 * denom2 / p;
@@ -24,6 +17,8 @@ class Solution {
         
         
     }
+    
+    // 최대공약수 구하는 메서드
     public static int gcd(int a, int b) {
         if(a > b) {
             if( b == 0) return a;
